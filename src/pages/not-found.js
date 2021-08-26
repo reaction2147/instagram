@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Header from '../components/header'
 
 export default function NotFound() {
+
+    useEffect(() => {
+        document.title="404 - Not Found"
+    })
+
     return (
-        <p>Hello from Not found</p>
+        <>
+        <Header />
+        <div className="bg-gray-200">
+            <div className="mx-auto max-w-screen-lg py-4">
+                <p className="text-center text-3xl">Not Found!</p>
+            </div>
+        </div>
+        </>
     )
 }
